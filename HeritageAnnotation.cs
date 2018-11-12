@@ -14,7 +14,7 @@ namespace HeritageWalk
         int stepNumber;
 
 
-        private HeritageAnnotation(string title, string desc,CLLocationCoordinate2D coord, string img, int step)
+        public HeritageAnnotation(string title, string desc,CLLocationCoordinate2D coord, string img, int step)
         {
             this.title = title;
             this.description = desc;

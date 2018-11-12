@@ -10,7 +10,6 @@ namespace HeritageWalk
 {
     public partial class MapViewController : UIViewController
     {
-        List<Trail> trails = new List<Trail>();
         List<stop> stops = new List<stop>();
         List<HeritageAnnotation> RouteAnnotations = new List<HeritageAnnotation>();
         MKMapView map;
@@ -28,19 +27,14 @@ namespace HeritageWalk
             // Perform any additional setup after loading the view, typically from a nib.
 
             //Grab data from database
-            var documentsFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            String pathToDatabase = NSBundle.MainBundle.PathForResource("HeritageWalkLite", "db");
+            //var documentsFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            //String pathToDatabase = NSBundle.MainBundle.PathForResource("HeritageWalkLite", "db");
 
-            using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
-            {
-                trails = connection.Table<Trail>().ToList();
-                stops = connection.Table<stop>().ToList();
-            }
-            RouteAnnotations = new List<HeritageAnnotation>();
-            foreach (stop stop in stops)
-            {
-                RouteAnnotations.Add(HeritageAnnotation.GetHeritageAnnotation(stop));
-            }
+            //using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
+            //{
+            //    stops = connection.Table<stop>().ToList();
+            //}
+ 
             //old test annotations initialisation
             //RouteAnnotations = new List<HeritageAnnotation>(){
             //    new HeritageAnnotation("Perth Town Hall", "The Perth town hall officially opened on June 1, 1870 and is the only capital city town hall in Australia to be built by convicts. Major restoration...", new CLLocationCoordinate2D(-31.955, 115.860556),"townHall.jpeg", 1),
@@ -48,6 +42,12 @@ namespace HeritageWalk
             //    new HeritageAnnotation("Albany Bell Tea Rooms", "Still recognisable in Barrack Street is the classically inspired facade of the Albany...", new CLLocationCoordinate2D(-31.9538135, 115.860374),"alb.jpg", 3),
             //    new HeritageAnnotation("Kings Park", "Kings park Description", new CLLocationCoordinate2D(-31.958867, 115.843972),"mcness.jpg",4)
             //};
+
+            RouteAnnotations = new List<HeritageAnnotation>();
+            foreach (stop stop in stops)
+            {
+                RouteAnnotations.Add(HeritageAnnotation.GetHeritageAnnotation(stop));
+            }
 
             map = new MKMapView(UIScreen.MainScreen.Bounds);
             View = map;
@@ -61,9 +61,18 @@ namespace HeritageWalk
             map.SetRegion(region, true);
 
             //TODO: Add check to make sure internet/routes available 
-            getRoute(0, 0 , null);
 
-            map.AddAnnotations(RouteAnnotations.ToArray());
+            //if there are routes
+            if (RouteAnnotations.Count > 0)
+            {
+                getRoute(0, 0, null);
+                map.AddAnnotations(RouteAnnotations.ToArray());
+            }else{
+                RouteAnnotations = new List<HeritageAnnotation>();
+                RouteAnnotations.Add(new HeritageAnnotation("Error! No Trail Information!", "", new CLLocationCoordinate2D(-31.9546161, 115.8602917), "townHall.jpeg", 0));
+                map.AddAnnotations(RouteAnnotations.ToArray());
+            }
+
         }
 
         public override void DidReceiveMemoryWarning()
@@ -72,6 +81,7 @@ namespace HeritageWalk
             // Release any cached data, images, etc that aren't in use.
         }
 
+        //used by the MapDelegate to change the selected stop and therefore move to the appropriate details stop page.
         public void SetCurrentStop(int id){
             foreach (var stop in stops)
             {
@@ -143,13 +153,13 @@ namespace HeritageWalk
                             if (map.Overlays.Length == 1)
                             {
                                 //if one polyline, set visible map rect
-                                map.SetVisibleMapRect(routes[0].Polyline.BoundingMapRect, new UIEdgeInsets(100, 100, 100, 100), false);
+                                map.SetVisibleMapRect(routes[0].Polyline.BoundingMapRect, new UIEdgeInsets(10, 10, 10, 10), false);
                             }
                             else
                             {
                                 //if more than one merge the route + and current view rect + set
-                                map.SetVisibleMapRect(MKMapRect.Union(map.VisibleMapRect, route.Polyline.BoundingMapRect), new UIEdgeInsets(100, 100, 100, 100), false);
-
+                                map.SetVisibleMapRect(MKMapRect.Union(map.VisibleMapRect, route.Polyline.BoundingMapRect), new UIEdgeInsets(10, 10, 10, 10), false);
+                               
                             }
                         }
                     }
@@ -157,8 +167,16 @@ namespace HeritageWalk
             });
         }
 
+        //returns the current list of stops.
         public List<stop> GetStops(){
             return stops;
+        }
+
+
+        //This function must be called in the Previous View Controllers PrepareForSegue in order to update the map with the stops to be shown.
+        public void SetStops(List<stop> _stops){
+            stops = _stops;
+            currentStop = stops[0];
         }
 
 

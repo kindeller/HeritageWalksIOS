@@ -36,14 +36,16 @@ namespace HeritageWalk
                 //adds image as pin
                 //annotationView.Image = UIImage.FromFile(((HeritageAnnotation)annotation).Image);
                 annotationView.Image = UIImage.FromFile("pin.png");
+                annotationView.Frame = new CGRect(-5, -5, 25, 25);
                 UITextView textView = new UITextView(new CGRect(0, 0, 35, 35));
 
                 if(((HeritageAnnotation)annotation).StepNumber != 0){
                     textView.Text = ((HeritageAnnotation)annotation).StepNumber.ToString();
-                    textView.Font = UIFont.PreferredTitle1;
+                    textView.Font = UIFont.PreferredBody;
                     textView.TextColor = UIColor.Brown;
                     textView.BackgroundColor = null;
                     textView.Editable = false;
+                    textView.Selectable = false;
                     annotationView.AddSubview(textView); 
                 }
 
@@ -77,6 +79,7 @@ namespace HeritageWalk
             if (view.Annotation is HeritageAnnotation)
             {
                 //view.Image = UIImage.FromFile(((HeritageAnnotation)view.Annotation).Image);
+
             }
         }
 
@@ -95,7 +98,7 @@ namespace HeritageWalk
             {
                 MKPolylineRenderer renderer = new MKPolylineRenderer((MKPolyline)overlay);
                 renderer.LineWidth = 5;
-                renderer.StrokeColor = UIColor.Black;
+                renderer.StrokeColor = UIColor.FromRGB(0, 150, 136);
                 return renderer;
             }
 
