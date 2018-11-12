@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="241">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" customColorSpace="sRGB" colorSpace="calibratedRGB" red="0.96862745098039216" green="0.96470588235294119" blue="0.96078431372549022" alpha="1"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2245" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="164" y="461" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue id="10320" destination="389" kind="show"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="12287" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="768" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="13653"/>
+                                    <barButtonItem title="Item" id="12288" image="HomeIcon" width="25">
+                                        <connections>
+                                            <segue id="12615" destination="5267" kind="show"/>
+                                        </connections>
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0.88627450980392153" green="0.70196078431372544" blue="0.51372549019607838" alpha="1"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="12926">
+                                        <connections>
+                                            <action selector="UIBarButtonItem12926_Activated:" destination="BYZ-38-t0r" id="12927"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Item" id="12289" image="FavouritesIcon" width="25">
+                                        <connections>
+                                            <segue id="13638" destination="5267" kind="show"/>
+                                        </connections>
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0.88627450980392153" green="0.70196078431372544" blue="0.51372549019607838" alpha="1"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="12928"/>
+                                    <barButtonItem title="Item" id="12617" image="AboutIcon" width="25">
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0.88627450980392153" green="0.70196078431372544" blue="0.51372549019607838" alpha="1"/>
+                                        <connections>
+                                            <segue id="13496" destination="2795" kind="show"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="12929"/>
+                                    <barButtonItem title="Item" id="12618" image="MapIcon" width="25">
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0.88627450980392153" green="0.70196078431372544" blue="0.51372549019607838" alpha="1"/>
+                                        <connections>
+                                            <segue id="16219" destination="15871" kind="show" identifier="Main"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="13652"/>
+                                </items>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.88627450980392153" green="0.70196078431372544" blue="0.51372549019607838" alpha="1"/>
+                                <color key="barTintColor" colorSpace="calibratedRGB" red="0.050980392156862744" green="0.396078431372549" blue="0.35294117647058826" alpha="1"/>
+                                <color key="tintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="tintColor" colorSpace="calibratedRGB" red="0.38039215686274508" green="0.792156862745098" blue="0.71372549019607845" alpha="1"/>
+                    </view>
+                    <navigationItem id="380" key="navigationItem" title="Home"/>
+                    <connections>
+                        <outlet property="BUMBUM" destination="2245" id="name-outlet-2245"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-889" y="104"/>
+        </scene>
+        <scene sceneID="240">
+            <objects>
+                <navigationController id="241" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="243">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue id="381" destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="244" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1605" y="99"/>
+        </scene>
+        <scene sceneID="388">
+            <objects>
+                <viewController id="389" sceneMemberID="viewController" customClass="TrailDetailsControler">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="386"/>
+                        <viewControllerLayoutGuide type="bottom" id="387"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="390">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinX="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96862745098039216" green="0.96470588235294119" blue="0.96078431372549022" alpha="1"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="508" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="013939d.jpg">
+                                <rect key="frame" x="60" y="137" width="251" height="128"/>
+                                <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinX="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="509" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="325" y="194" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="ArrowLeft"/>
+                                <connections>
+                                    <action selector="RightCarouselBtn_TouchUpInside:" destination="389" id="749" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="510" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="18" y="186" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="ArrowRight"/>
+                                <connections>
+                                    <action selector="LeftCarouselBtn_TouchUpInside:" destination="389" id="748" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="511" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="6" y="431" width="364" height="276"/>
+                                <autoresizingMask key="autoresizingMask" heightSizable="YES" flexibleMaxX="YES" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="513" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="161" y="336" width="53" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="Play"/>
+                                <connections>
+                                    <action selector="PlayBtn_TouchUpInside:" destination="389" id="15535" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="537" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="226" y="336" width="54" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="Stop"/>
+                                <connections>
+                                    <action selector="StopBtn_TouchUpInside:" destination="389" id="15536" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" id="10765" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="10766"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="13658" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="768" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="13659"/>
+                                    <barButtonItem title="Item" id="13660" image="HomeIcon" width="25">
+                                        <connections>
+                                            <segue id="13807" destination="BYZ-38-t0r" kind="show"/>
+                                        </connections>
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0.88627450980392153" green="0.70196078431372544" blue="0.51372549019607838" alpha="1"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="13663">
+                                        <connections>
+                                            <action selector="UIBarButtonItem12926_Activated:" destination="13665" id="13664"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Item" id="13666" image="FavouritesIcon" width="25">
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0.88627450980392153" green="0.70196078431372544" blue="0.51372549019607838" alpha="1"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="13668"/>
+                                    <barButtonItem title="Item" id="13669" image="AboutIcon" width="25">
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0.88627450980392153" green="0.70196078431372544" blue="0.51372549019607838" alpha="1"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="13672"/>
+                                    <barButtonItem title="Item" id="13673" image="MapIcon" width="25">
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0.88627450980392153" green="0.70196078431372544" blue="0.51372549019607838" alpha="1"/>
+                                        <connections>
+                                            <segue id="16179" destination="15871" kind="show"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="13676"/>
+                                </items>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.88627450980392153" green="0.70196078431372544" blue="0.51372549019607838" alpha="1"/>
+                                <color key="barTintColor" colorSpace="calibratedRGB" red="0.050980392156862744" green="0.396078431372549" blue="0.35294117647058826" alpha="1"/>
+                                <color key="tintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="15552" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="12" y="376" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Rewind"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="15553" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="80" y="336" width="61" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Pause"/>
+                                <connections>
+                                    <action selector="PauseBtn_TouchUpInside:" destination="389" id="15571" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="15554" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="313" y="376" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="FastForward"/>
+                            </button>
+                        </subviews>
+                        <color key="tintColor" colorSpace="calibratedRGB" red="0.3843137254901961" green="0.792156862745098" blue="0.71764705882352942" alpha="1"/>
+                    </view>
+                    <connections>
+                        <outlet property="LeftCarouselBtn" destination="510" id="name-outlet-510"/>
+                        <outlet property="RightCarouselBtn" destination="509" id="name-outlet-509"/>
+                        <outlet property="Carousel" destination="508" id="name-outlet-508"/>
+                        <outlet property="DescriptionText" destination="511" id="name-outlet-511"/>
+                        <outlet property="playBtn" destination="513" id="name-outlet-513"/>
+                        <outlet property="stopBtn" destination="537" id="name-outlet-537"/>
+                        <outlet property="pauseBtn" destination="15553" id="name-outlet-15553"/>
+                        <outlet property="rewindBtn" destination="15552" id="name-outlet-15552"/>
+                        <outlet property="fastFowardBtn" destination="15554" id="name-outlet-15554"/>
+                        <outlet property="StopNameTitle" destination="10765" id="name-outlet-10765"/>
+                        <outlet property="StopNameText" destination="10766" id="name-outlet-10766"/>
+                    </connections>
+                    <navigationItem id="5711" key="navigationItem" title="Stop Info">
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" image="YES"/>
+                        </accessibility>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="391" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="564" y="456"/>
+        </scene>
+        <scene sceneID="2794">
+            <objects>
+                <viewController id="2795" sceneMemberID="viewController" customClass="AboutControler">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2792"/>
+                        <viewControllerLayoutGuide type="bottom" id="2793"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2796" customClass="A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96862745098039216" green="0.96470588235294119" blue="0.96078431372549022" alpha="1"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="5479" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Image">
+                                <rect key="frame" x="68" y="175" width="234" height="241"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinX="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
+                                <rect key="contentStretch" x="0" y="0.0" width="1" height="1"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5940" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="Our Story">
+                                <rect key="frame" x="124" y="460" width="122" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinX="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.31372549019607843" green="0.30196078431372547" blue="0.32156862745098042" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" id="9617" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="64" width="375" height="48"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="9618"/>
+                                </items>
+                                <color key="barTintColor" colorSpace="calibratedRGB" red="0.33725490196078434" green="0.75294117647058822" blue="0.70196078431372544" alpha="1"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" colorSpace="calibratedRGB" red="0.050980392156862744" green="0.4" blue="0.35686274509803922" alpha="1"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="23" weight="semibold"/>
+                                </textAttributes>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="5480" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="16" y="502" width="343" height="306"/>
+                                <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinX="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96862745098039216" green="0.96470588235294119" blue="0.96078431372549022" alpha="1"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.31372549019607843" green="0.30196078431372547" blue="0.32156862745098042" alpha="1"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="385" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="134" y="129" width="106" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Help Page"/>
+                                <connections>
+                                    <segue id="5375" destination="5267" kind="show"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationItem title="About" id="14039" key="navigationItem"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2797" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-588" y="-1015"/>
+        </scene>
+        <scene sceneID="5266">
+            <objects>
+                <viewController id="5267" sceneMemberID="viewController" customClass="HelpControler">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5264"/>
+                        <viewControllerLayoutGuide type="bottom" id="5265"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5268">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96862745098039216" green="0.96470588235294119" blue="0.96078431372549022" alpha="1"/>
+                        <color key="tintColor" colorSpace="calibratedRGB" red="0.38039215686274508" green="0.792156862745098" blue="0.71372549019607845" alpha="1"/>
+                    </view>
+                    <navigationItem title="Help" id="14040" key="navigationItem"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5269" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="554" y="-987"/>
+        </scene>
+        <scene sceneID="15870">
+            <objects>
+                <viewController id="15871" sceneMemberID="viewController" customClass="MapViewController" title="HeritageMapView">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="15868"/>
+                        <viewControllerLayoutGuide type="bottom" id="15869"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="15872">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="15876" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="768" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="15877"/>
+                                    <barButtonItem title="Item" id="15878" image="HomeIcon" width="25">
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0.88627450980392153" green="0.70196078431372544" blue="0.51372549019607838" alpha="1"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="15881">
+                                        <connections>
+                                            <action selector="UIBarButtonItem12926_Activated:" destination="15883" id="15882"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Item" id="15884" image="FavouritesIcon" width="25">
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0.88627450980392153" green="0.70196078431372544" blue="0.51372549019607838" alpha="1"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="15885"/>
+                                    <barButtonItem title="Item" id="15886" image="AboutIcon" width="25">
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0.88627450980392153" green="0.70196078431372544" blue="0.51372549019607838" alpha="1"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="15887"/>
+                                    <barButtonItem title="Item" id="15888" image="MapIcon" width="25">
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0.88627450980392153" green="0.70196078431372544" blue="0.51372549019607838" alpha="1"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="15889"/>
+                                </items>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.88627450980392153" green="0.70196078431372544" blue="0.51372549019607838" alpha="1"/>
+                                <color key="barTintColor" colorSpace="calibratedRGB" red="0.050980392156862744" green="0.396078431372549" blue="0.35294117647058826" alpha="1"/>
+                                <color key="tintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                            </toolbar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="16689" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="64" width="375" height="703"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                    </view>
+                    <navigationItem id="15890" key="navigationItem" title="Trail Map"/>
+                    <connections>
+                        <segue id="18130" destination="389" kind="show" identifier="Details"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="15873" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1229" y="-647"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ArrowLeft" width="32" height="32"/>
+        <image name="ArrowRight" width="32" height="32"/>
+        <image name="Stop" width="64" height="64"/>
+        <image name="Play" width="64" height="64"/>
+        <image name="Image" width="234" height="241"/>
+        <image name="013939d.jpg" width="564" height="435"/>
+        <image name="HomeIcon" width="14" height="12"/>
+        <image name="FavouritesIcon" width="14" height="11"/>
+        <image name="AboutIcon" width="6" height="14"/>
+        <image name="MapIcon" width="11" height="14"/>
+        <image name="Pause" width="64" height="64"/>
+        <image name="FastForward" width="64" height="64"/>
+        <image name="Rewind" width="64" height="64"/>
+    </resources>
+</document>
